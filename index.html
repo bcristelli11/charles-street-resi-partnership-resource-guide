@@ -235,6 +235,21 @@ table.price tfoot td { padding: 18px 20px; background: var(--pewter-soft); font-
 .qa-group { margin-top: 48px; }
 .qa-group h3 { margin-bottom: 12px; }
 
+/* SCOPE ACCORDIONS (inline within pricing blocks) */
+.scope-accordion { border: 1px solid var(--pewter-medium); border-radius: 16px; margin-top: 20px; margin-bottom: 20px; overflow: hidden; }
+.scope-accordion summary { list-style: none; cursor: pointer; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; font-size: 15px; font-weight: 500; color: var(--midnight); background: var(--pewter-soft); transition: background 0.15s; }
+.scope-accordion summary::-webkit-details-marker { display: none; }
+.scope-accordion summary:hover { background: var(--pewter-subtle); }
+.scope-accordion summary::after { content: '+'; font-size: 20px; font-weight: 300; color: var(--midnight-50); }
+.scope-accordion[open] summary::after { content: '−'; color: var(--truv); }
+.scope-accordion[open] summary { background: var(--truv-tint-soft); }
+.scope-accordion .scope-body { padding: 24px; font-size: 14px; color: var(--midnight-80); line-height: 1.6; }
+.scope-body h5 { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--midnight); margin: 20px 0 8px; }
+.scope-body h5:first-child { margin-top: 0; }
+.scope-body ul { list-style: none; padding: 0; margin: 0 0 8px; }
+.scope-body ul li { padding: 3px 0 3px 14px; position: relative; }
+.scope-body ul li::before { content: '•'; position: absolute; left: 0; color: var(--midnight-50); }
+
 /* FOOTER */
 footer { padding: 40px 0 60px; background: var(--pewter-soft); text-align: center; }
 footer .f-brand { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 12px; }
@@ -829,7 +844,7 @@ footer p { font-size: 13px; color: var(--midnight-50); }
             <td class="num">$399</td>
           </tr>
           <tr>
-            <td class="row-label">SEO | Premium</td>
+            <td class="row-label">SEO | Pro</td>
             <td class="num">6</td>
             <td class="num">$999/mo</td>
             <td class="num">$5,994</td>
@@ -843,13 +858,124 @@ footer p { font-size: 13px; color: var(--midnight-50); }
         </tfoot>
       </table>
 
-      <p class="price-fine">Core platform includes 99.95% uptime, builder access, integrations hub, technical support, and dedicated CX. SEO Premium includes monthly evergreen content, keyword strategy per property, quarterly business reviews, GBP optimization with live pricing, and generative search optimization.</p>
+      <p class="price-fine">Core platform includes 99.95% uptime, builder access, integrations hub, technical support, and dedicated CX. SEO Pro includes monthly evergreen content, keyword strategy per property, quarterly business reviews, GBP optimization with live pricing, and generative search optimization.</p>
+
+      <!-- SEO Pro scope -->
+      <details class="scope-accordion">
+        <summary>View full scope: Enhanced SEO | Pro</summary>
+        <div class="scope-body">
+          <p><strong>Objective:</strong> Accelerate organic visibility and leasing performance for high-priority properties through advanced competitive analysis, deeper content optimization, and increased local search activity.</p>
+          <h5>Strategy and planning</h5>
+          <ul>
+            <li>Onboarding review and SEO baseline assessment</li>
+            <li>Deep competitor analysis (up to 10 competitors, up to 15 target keywords)</li>
+            <li>Deep content audit to identify advanced optimization and expansion opportunities</li>
+            <li>Keyword targeting strategy to guide on-page optimization and content creation</li>
+          </ul>
+          <h5>Content updates and optimization</h5>
+          <ul>
+            <li>Creation of 1 SEO-optimized evergreen content page per month</li>
+            <li>Comprehensive content optimization across priority pages</li>
+            <li>Updates to existing site content to improve relevance, structure, and performance</li>
+            <li>Ongoing refinement of content structure, internal linking, and keyword alignment</li>
+          </ul>
+          <h5>Technical SEO</h5>
+          <ul>
+            <li>Technical SEO audit</li>
+            <li>404 error resolution and redirect implementation</li>
+            <li>Internal linking and URL structure optimization</li>
+            <li>Page speed and Time to First Byte (TTFB) analysis</li>
+            <li>JavaScript, CSS, and image optimization recommendations</li>
+            <li>Optimization of title tags, meta descriptions, heading structure, and ALT text</li>
+            <li>Review of duplicate or thin content and redirect chains or loops</li>
+            <li>Schema markup and structured data implementation</li>
+          </ul>
+          <h5>Google Business Profile optimization</h5>
+          <ul>
+            <li>Daily Google Business Profile posts</li>
+            <li>Live pricing updates</li>
+            <li>Keyword optimizations</li>
+            <li>Q&amp;A setup and rewrites</li>
+            <li>GBP Products section creation and updates</li>
+            <li>Local link building and social channel linking</li>
+          </ul>
+          <h5>Monthly reporting</h5>
+          <ul>
+            <li>Organic traffic performance</li>
+            <li>Top-performing pages</li>
+            <li>Target keyword rankings and movement</li>
+            <li>Contact submissions and calls from organic traffic</li>
+            <li>Conversion rate and click-through rate (CTR)</li>
+            <li>Engagement metrics (bounce rate, session duration)</li>
+            <li>Google Business Profile impressions and interactions</li>
+            <li>Key insights and optimization opportunities</li>
+          </ul>
+          <h5>Quarterly reporting and strategy review</h5>
+          <ul>
+            <li>Organic traffic and traffic source trends</li>
+            <li>Keyword growth and competitive landscape summary</li>
+            <li>Conversion rate and funnel performance analysis</li>
+            <li>Top-performing pages and engagement quality trends</li>
+            <li>Core Web Vitals (sitewide assessment)</li>
+            <li>Quarterly action plan with prioritized optimization initiatives</li>
+          </ul>
+        </div>
+      </details>
     </div>
 
     <!-- Ongoing: Ads -->
     <div class="price-block">
       <h3 class="block-title">Ongoing: digital advertising</h3>
       <p class="price-intro">Three media budget scenarios sized to the portfolio. Figures below are per property, per month. Ads management fee is 20% of media spend (minimum $1,125/mo Pro tier), covering strategy, setup, optimization, creative testing, and reporting. SEO is priced separately above.</p>
+
+      <!-- Digital Ads Pro scope -->
+      <details class="scope-accordion">
+        <summary>View full scope: Digital Ads | Pro</summary>
+        <div class="scope-body">
+          <p><strong>Objective:</strong> Accelerate leasing performance through advanced, multi-channel paid media execution, with frequent optimization, deeper audience segmentation, real-time performance monitoring, and strategic budget management.</p>
+          <h5>Strategy and planning</h5>
+          <ul>
+            <li>Onboarding review and paid media baseline assessment</li>
+            <li>Keyword and audience analysis to identify high-performing segments</li>
+            <li>Expanded channel and audience targeting strategy, including combined and custom audience segments</li>
+          </ul>
+          <h5>Campaign setup and management</h5>
+          <ul>
+            <li>Conversion-focused campaign structure across Google Search, Google Performance Max / Display, Meta (Facebook &amp; Instagram), YouTube Ads, and TikTok or Bing Ads</li>
+            <li>Customized ad extensions with monthly updates to callouts and sitelinks</li>
+            <li>Premium ad creative development with ongoing A/B testing</li>
+            <li>Bi-weekly keyword expansion and negative keyword adjustments</li>
+            <li>Bi-weekly ad copy reviews and A/B testing</li>
+            <li>Budget pacing verification, bid strategy adjustments, and real-time monitoring</li>
+          </ul>
+          <h5>Conversion tracking and measurement</h5>
+          <ul>
+            <li>Conversion tracking for lead forms, phone calls, and tour actions</li>
+            <li>Monthly audience targeting adjustments</li>
+            <li>Remarketing campaigns to re-engage high-intent visitors</li>
+            <li>Google Analytics 4 (GA4) integration with UTM tracking setup</li>
+            <li>Meta Pixel integration for audience tracking and optimization</li>
+          </ul>
+          <h5>Monthly reporting</h5>
+          <ul>
+            <li>Visual dashboards summarizing key metrics and performance</li>
+            <li>Campaign performance metrics (CTR, CPC, conversion rate, cost per lead)</li>
+            <li>Keyword and audience performance breakdown</li>
+            <li>Budget pacing and optimization trends</li>
+            <li>Top-performing ads and A/B testing results</li>
+            <li>Tactical recommendations for optimization (keyword adjustments, bid strategy updates)</li>
+          </ul>
+          <h5>Quarterly reporting</h5>
+          <ul>
+            <li>Ad performance trends and efficiency analysis across channels</li>
+            <li>Audience targeting review and behavioral insights</li>
+            <li>Conversion analysis and funnel performance</li>
+            <li>Strategic adjustments based on performance learnings</li>
+            <li>Budget strategy insights and spend optimization recommendations</li>
+            <li>High-level performance insights and forward-looking priorities</li>
+          </ul>
+        </div>
+      </details>
 
       <div class="scenarios">
         <!-- Balanced (left) -->
@@ -1136,6 +1262,7 @@ document.querySelectorAll('.toggle-group button[data-up]').forEach(btn => {
     }
   });
 });
+
 </script>
 
 </body>
